@@ -1,173 +1,418 @@
- <!--
--->
-
 <div align="center">
 
-<a href="https://github.com/saros-dev">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0F172A,50:164E63,100:0891B2&text=SAROS&fontColor=FFFFFF&fontSize=68&fontAlignY=38&desc=DEVOPS%20%7C%20SRE%20%7C%20OBSERVABILITY&descAlignY=58&descSize=17&animation=fadeIn" width="100%" alt="Saros — DevOps, SRE and Observability"/>
-</a>
+# Saros
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=650&lines=Build+reliable+systems.;Instrument+every+critical+path.;Trace+requests.+Understand+latency.;Automate+the+repeatable.;Learn+by+building%2C+break+to+understand." alt="Animated engineering principles"/>
-</a>
+### DevOps · DevSecOps · SRE · Observability · Open Source
 
-<br/>
+**Building systems that are observable, secure, automated, and reliable.**
 
-<a href="https://github.com/saros-dev?tab=repositories">
-  <img src="https://img.shields.io/badge/FOCUS-Engineering%20%26%20Automation-0F172A?style=for-the-badge" alt="Engineering and automation"/>
-</a>
-<a href="https://github.com/saros-dev/devops-shop">
-  <img src="https://img.shields.io/badge/FLAGSHIP-DevOps%20Shop-0891B2?style=for-the-badge" alt="Flagship project"/>
-</a>
+<br />
+
+[![GitHub](https://img.shields.io/badge/GitHub-saros--dev-181717?style=flat-square\&logo=github)](https://github.com/saros-dev)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Projects-2ea44f?style=flat-square\&logo=opensourceinitiative\&logoColor=white)](https://github.com/saros-dev)
+[![Security](https://img.shields.io/badge/Security-Minded-8B0000?style=flat-square\&logo=hackthebox\&logoColor=white)](https://github.com/saros-dev)
 
 </div>
 
 ---
 
-## `$ whoami`
+```text
+$ whoami
 
-I'm Saros, an engineer focused on **DevOps, Site Reliability Engineering, and Observability**.
+Saros
 
-I enjoy understanding how systems work beneath the surface: how applications communicate, how infrastructure fails, where latency originates, and how automation makes deployments more repeatable.
+DevOps / DevSecOps / SRE engineer
+Open-source builder
+Observability & infrastructure enthusiast
+Security-minded engineer
 
-My approach is hands-on:
+$ mission
 
-* Build applications and infrastructure labs.
-* Automate development and delivery workflows.
-* Instrument applications to collect metrics and distributed traces.
-* Investigate performance issues and system failures.
-* Document findings so experiments become reusable engineering knowledge.
-
-**My engineering philosophy:** Don't just make it work. Understand why it works, how it fails, and how to prove what's happening.
-
-## `// currently_building`
-
-### DevOps Shop
-
-An evolving, hands-on DevOps and observability project built around a Go application, PostgreSQL, and an OpenTelemetry-based telemetry pipeline.
-
-<div align="center">
-
-<a href="https://github.com/saros-dev/devops-shop">
-  <img src="https://img.shields.io/badge/Explore-DevOps%20Shop-0891B2?style=for-the-badge&logo=github&logoColor=white" alt="Explore DevOps Shop"/>
-</a>
-
-</div>
-
-**Application layer**
-
-* Go and REST API endpoints
-* PostgreSQL integration
-* Request handling and database interactions
-
-**Observability layer**
-
-* OpenTelemetry instrumentation and Collector
-* Prometheus metrics
-* Grafana dashboards
-* Tempo distributed tracing
-
-**Engineering objectives**
-
-* Follow requests across application and database boundaries.
-* Investigate latency using trace spans and database timing.
-* Connect telemetry signals to make troubleshooting more effective.
-* Build repeatable testing, delivery, and deployment workflows.
-
-The goal is to move beyond *"the application is slow"* and identify which operation is slow, how much time it takes, and what the available telemetry can prove about the cause.
-
-## `// system_architecture`
-
-<div align="center">
-
-```mermaid
-flowchart TB
-    U["Client / HTTP Request"] --> API["Go REST API"]
-    API <--> DB[("PostgreSQL")]
-    API -. "Traces and metrics" .-> OTEL["OpenTelemetry Collector"]
-    DB -. "DB telemetry when instrumented" .-> OTEL
-    OTEL --> P["Prometheus"]
-    OTEL --> T["Tempo"]
-    OTEL --> L["Loki (when configured)"]
-    P --> G["Grafana"]
-    T --> G
-    L --> G
-
-    classDef app fill:#164E63,stroke:#22D3EE,color:#FFFFFF
-    classDef store fill:#1E293B,stroke:#64748B,color:#FFFFFF
-    classDef observe fill:#312E81,stroke:#A5B4FC,color:#FFFFFF
-
-    class API,OTEL app
-    class DB store
-    class P,T,L,G observe
+Build       → systems that work
+Secure      → systems that can be trusted
+Observe     → systems that can be understood
+Automate    → systems that can be operated
+Improve     → systems that can evolve
 ```
 
-<sub>Target architecture overview. Telemetry paths and log collection depend on the current implementation and configuration.</sub>
+## What I Build
 
-</div>
+I work at the intersection of **infrastructure, observability, security, and software engineering**.
 
-## `// technology_stack`
+My interests range from Linux and networking to containers, CI/CD, Kubernetes, distributed tracing, application performance, and security engineering.
 
-**Systems & development**
+I prefer learning by building complete systems:
 
-<a href="https://www.linux.org/"><img src="https://img.shields.io/badge/Linux-111827?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux"/></a> <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-111827?style=flat-square&logo=git&logoColor=F05032" alt="Git"/></a> <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Bash-111827?style=flat-square&logo=gnubash&logoColor=4EAA25" alt="Bash"/></a> <a href="https://go.dev/"><img src="https://img.shields.io/badge/Go-111827?style=flat-square&logo=go&logoColor=00ADD8" alt="Go"/></a> <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=3776AB" alt="Python"/></a>
+> **Build it → instrument it → break it → investigate it → secure it → automate it.**
 
-**Containers & delivery**
+---
 
-<a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-111827?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker"/></a> <a href="https://docs.github.com/en/actions"><img src="https://img.shields.io/badge/GitHub%20Actions-111827?style=flat-square&logo=githubactions&logoColor=2088FF" alt="GitHub Actions"/></a> <a href="https://about.gitlab.com/topics/ci-cd/"><img src="https://img.shields.io/badge/GitLab%20CI-111827?style=flat-square&logo=gitlab&logoColor=FC6D26" alt="GitLab CI"/></a>
+# 🚀 SarosObserv
+
+### Open-source observability platform
+
+**SarosObserv** is my most important open-source project.
+
+The long-term goal is to build an independent, OpenTelemetry-native observability platform that can grow from a focused engineering project into a **large-scale open-source observability ecosystem**.
+
+The ambition is not to build another dashboard.
+
+It is to build the platform underneath the dashboard.
+
+**SarosObserv aims to make it possible to:**
+
+* ingest telemetry through OpenTelemetry / OTLP
+* discover applications, services, endpoints, and dependencies
+* explore distributed traces
+* understand latency across service boundaries
+* correlate telemetry signals
+* query telemetry efficiently
+* visualize system behavior
+* progressively introduce metrics and logs
+* provide developers and operators with useful application intelligence
+* remain open, extensible, self-hostable, and community-driven
+
+### Current architecture
+
+```text
+                    APPLICATIONS
+                         │
+                         │ OpenTelemetry
+                         ▼
+              ┌─────────────────────┐
+              │  OpenTelemetry      │
+              │     Collector       │
+              └──────────┬──────────┘
+                         │ OTLP
+                         ▼
+              ┌─────────────────────┐
+              │    SarosObserv      │
+              │     Go Backend      │
+              └──────────┬──────────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │ ClickHouse  │
+                  │    Storage  │
+                  └──────┬──────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │  REST API   │
+                  └──────┬──────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │ React / TS  │
+                  │     UI      │
+                  └─────────────┘
+```
+
+### Current engineering focus
+
+**Backend**
+
+`Go` · `OTLP` · `REST API` · `ClickHouse`
+
+**Frontend**
+
+`React` · `TypeScript`
+
+**Infrastructure**
+
+`Docker` · `Docker Compose`
 
 **Observability**
 
-<a href="https://opentelemetry.io/"><img src="https://img.shields.io/badge/OpenTelemetry-111827?style=flat-square&logo=opentelemetry&logoColor=F5F5F5" alt="OpenTelemetry"/></a> <a href="https://prometheus.io/"><img src="https://img.shields.io/badge/Prometheus-111827?style=flat-square&logo=prometheus&logoColor=E6522C" alt="Prometheus"/></a> <a href="https://grafana.com/"><img src="https://img.shields.io/badge/Grafana-111827?style=flat-square&logo=grafana&logoColor=F46800" alt="Grafana"/></a> <a href="https://grafana.com/oss/tempo/"><img src="https://img.shields.io/badge/Tempo-111827?style=flat-square&logo=grafana&logoColor=F46800" alt="Grafana Tempo"/></a> <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-111827?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL"/></a>
+`OpenTelemetry` · `Distributed Tracing`
 
-<sub>Technologies shown here reflect my hands-on work and current learning focus; they do not imply equal proficiency in every tool.</sub>
-
-## `// featured_repositories`
-
-| Project                                                                               | What you'll find                                          |
-| ------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| [DevOps Shop](https://github.com/saros-dev/devops-shop)                               | Application engineering, PostgreSQL, and observability    |
-| [DevOps Lab](https://github.com/saros-dev/devops-lab)                                 | Practical infrastructure and DevOps experiments           |
-| [Linux Engineering Handbook](https://github.com/saros-dev/linux-engineering-handbook) | Linux administration, commands, and troubleshooting notes |
-| [GitHub Telegram Notify](https://github.com/saros-dev/github-telegram-notify)         | GitHub event automation and notifications                 |
-| [DevOps Task Manager](https://github.com/saros-dev/devops-task-manager)               | Application development and engineering practice          |
-
-## `// engineering_principles`
+### Long-term direction
 
 ```text
-BUILD       → Create something that works.
-INSTRUMENT  → Make its behavior observable.
-TEST        → Verify expected behavior.
-BREAK       → Reproduce realistic failure modes.
-INVESTIGATE → Follow evidence, not assumptions.
-AUTOMATE    → Make repeatable work reproducible.
-DOCUMENT    → Turn findings into engineering knowledge.
+Traces
+  │
+  ├── Metrics
+  │
+  ├── Logs
+  │
+  ├── Service Discovery
+  │
+  ├── Dependency Mapping
+  │
+  ├── Performance Analysis
+  │
+  ├── Incident Detection
+  │
+  └── Root Cause Analysis
+             │
+             ▼
+       Application Intelligence
 ```
 
-## `// current_learning_path`
+The vision is to build something that can eventually serve the same broad class of engineering needs as platforms such as Grafana, while taking a different architectural path and developing its own identity.
 
-* Linux internals, networking, and troubleshooting
-* Docker, container networking, and deployment workflows
-* CI/CD with GitHub Actions and GitLab CI
-* Infrastructure automation with Ansible and Terraform
-* Kubernetes architecture, networking, and operations
-* OpenTelemetry, distributed tracing, metrics, and logs
-* SRE fundamentals, reliability, and incident investigation
+**Repository:**
+https://github.com/saros-dev/sarosobserv
 
-## `// connect`
+---
+
+# 🔬 DevOps Shop
+
+A production-style application laboratory used to experiment with:
+
+`Go` · `PostgreSQL` · `Docker` · `OpenTelemetry` · `Prometheus` · `Grafana` · `Tempo`
+
+DevOps Shop is also one of the environments I use to develop and validate **SarosObserv**.
+
+```text
+DevOps Shop
+     │
+     ▼
+OpenTelemetry
+     │
+     ▼
+SarosObserv
+     │
+     ▼
+Trace → Analyze → Understand
+```
+
+https://github.com/saros-dev/devops-shop
+
+---
+
+# 🛡️ Security & Red Team
+
+Security is an important part of how I think about infrastructure.
+
+I'm particularly interested in the **adversarial side of engineering**:
+
+```text
+Recon
+  ↓
+Enumeration
+  ↓
+Attack Surface
+  ↓
+Threat Modeling
+  ↓
+Controlled Testing
+  ↓
+Detection
+  ↓
+Remediation
+  ↓
+Hardening
+```
+
+Areas I'm exploring:
+
+* Linux security and hardening
+* Network security
+* Web application security
+* OWASP methodology
+* Reconnaissance and enumeration
+* Vulnerability assessment
+* Container security
+* Kubernetes security
+* Identity and access control
+* Secrets management
+* DevSecOps
+* Detection engineering
+* Incident investigation
+
+The objective isn't simply to learn how to exploit a system.
+
+It's to understand **why the vulnerability exists, how it can be detected, how it can be remediated, and how the system can be made harder to compromise.**
+
+All offensive-security work is performed only in systems I own or am explicitly authorized to assess.
+
+---
+
+# 🧰 Engineering Stack
+
+### Systems
+
+`Linux` · `Bash` · `Git` · `Networking`
+
+### Development
+
+`Go` · `Python`
+
+### Infrastructure
+
+`Docker` · `Kubernetes` · `Terraform` · `Ansible`
+
+### CI/CD
+
+`GitHub Actions` · `GitLab CI` · `Jenkins`
+
+### Observability
+
+`OpenTelemetry` · `Prometheus` · `Grafana` · `Tempo` · `Loki`
+
+### Data
+
+`PostgreSQL` · `ClickHouse`
+
+### Security
+
+`OWASP` · `Nmap` · `Wireshark` · Linux hardening · Container security · DevSecOps
+
+---
+
+# 📌 Selected Projects
+
+### [SarosObserv](https://github.com/saros-dev/sarosobserv)
+
+**Open-source observability platform**
+
+Go · React · TypeScript · OpenTelemetry · ClickHouse
+
+---
+
+### [DevOps Shop](https://github.com/saros-dev/devops-shop)
+
+**Application and observability laboratory**
+
+Go · PostgreSQL · Docker · OpenTelemetry
+
+---
+
+### [DevOps Lab](https://github.com/saros-dev/devops-lab)
+
+**Hands-on infrastructure and DevOps experiments**
+
+Linux · Docker · CI/CD · Kubernetes · Observability
+
+---
+
+### [Linux Engineering Handbook](https://github.com/saros-dev/linux-engineering-handbook)
+
+**Practical Linux engineering and troubleshooting knowledge base**
+
+Linux · Networking · Bash · System Administration
+
+---
+
+### [GitHub Telegram Notify](https://github.com/saros-dev/github-telegram-notify)
+
+**Event-driven GitHub automation**
+
+GitHub · Python · Telegram
+
+---
+
+### [DevOps Task Manager](https://github.com/saros-dev/devops-task-manager)
+
+**Application engineering and DevOps practice**
+
+Go · Docker · CI/CD
+
+---
+
+# 🧠 How I Think About Engineering
+
+```text
+                         ┌───────────────┐
+                         │    SYSTEM     │
+                         └───────┬───────┘
+                                 │
+              ┌──────────────────┼──────────────────┐
+              │                  │                  │
+              ▼                  ▼                  ▼
+           BUILD              SECURE             OBSERVE
+              │                  │                  │
+              └──────────────────┼──────────────────┘
+                                 │
+                                 ▼
+                              OPERATE
+                                 │
+                                 ▼
+                            INVESTIGATE
+                                 │
+                                 ▼
+                              IMPROVE
+```
+
+I care less about collecting technology names and more about understanding:
+
+* what a system is doing
+* why it behaves that way
+* where it can fail
+* how it can be attacked
+* how failures can be detected
+* how operations can be automated
+* how the system can be improved
+
+---
+
+# 🌱 Current Direction
+
+```text
+Linux & Networking
+        ↓
+Containers
+        ↓
+CI/CD
+        ↓
+Infrastructure Automation
+        ↓
+Kubernetes
+        ↓
+Security / DevSecOps
+        ↓
+OpenTelemetry
+        ↓
+Distributed Observability
+        ↓
+SRE
+        ↓
+Building SarosObserv
+```
+
+My current priority is going deeper rather than simply expanding the list.
+
+---
+
+# 🌍 Open Source
+
+SarosObserv is intended to become a serious open-source project.
+
+The long-term vision includes:
+
+* a strong developer experience
+* clear architecture
+* reliable APIs
+* comprehensive documentation
+* automated testing
+* secure defaults
+* self-hosted deployments
+* Docker and Kubernetes support
+* extensibility
+* community contributions
+* an ecosystem around the platform
+
+I want the project to grow through **engineering quality and community contribution**, not simply through a collection of features.
+
+---
+
+# 📫 Connect
 
 <div align="center">
 
-<a href="https://github.com/saros-dev">
-  <img src="https://img.shields.io/badge/GitHub-saros--dev-111827?style=for-the-badge&logo=github" alt="GitHub profile"/>
-</a>
+[![GitHub](https://img.shields.io/badge/GitHub-saros--dev-181717?style=for-the-badge\&logo=github)](https://github.com/saros-dev)
 
-<br/><br/>
-
-<sub>BUILD · OBSERVE · AUTOMATE · INVESTIGATE · REPEAT</sub>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Saros%20Shojaii-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/saros-shojaiji/)
 
 </div>
 
-<a href="https://capsule-render.vercel.app/">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0891B2,100:0F172A&height=100&section=footer" width="100%" alt="Decorative footer"/>
-</a>
+---
+
+<div align="center">
+
+### BUILD · SECURE · OBSERVE · AUTOMATE · IMPROVE
+
+<sub>Open source • Infrastructure • Security • Observability</sub>
+
+</div>
